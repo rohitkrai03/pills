@@ -8,15 +8,15 @@
 @import "mixins";
 @import "reset";
 
+// the maximum width of the container in pixels
 $max-width: 1024px;
 
-// the maximum width of the container in pixels
+// the minimum width of the container in pixels, before it switches to a mobile friendly display
 $min-width: 768px;
 
-// the minimum width of the container in pixels, before it switches to a mobile friendly display
+// the padding that will be applied to both sides of a column in pixels
 $padding-width: 10px;
 
-// the padding that will be applied to both sides of a column in pixels
 
 .row {
     display: block;
@@ -215,6 +215,45 @@ $padding-width: 10px;
     &.by-eleven {
         @include offset-margin(11);
     }
+    
+
+    /* fractional offset*/
+    &.by-half{
+        @include fractional-offset-margin(1,2);
+    }
+
+    &.by-one-third {
+        @include fractional-offset-margin(1,3);
+    }
+
+    &.by-two-thirds{
+        @include fractional-offset-margin(2,3);
+    }
+
+    &.by-one-quarter, &.by-one-fourth{
+        @include fractional-offset-margin(1,4);
+    }
+
+    &.by-three-quarters, &.by-three-fourths {
+        @include fractional-offset-margin(3,4);
+    }
+
+    &.by-one-fifth {
+        @include fractional-offset-margin(1,5);
+    }
+
+    &.by-two-fifths{
+        @include fractional-offset-margin(2,5);
+    }
+
+    &.by-three-fifths{
+        @include fractional-offset-margin(3,5);
+    }
+
+    &.by-four-fifths{
+        @include fractional-offset-margin(4,5);
+    }
+
 }
 
 @media handheld, only screen and (max-width: 767px) {
