@@ -1,0 +1,13 @@
+// Mixins to calculate column width and offset margin
+
+@mixin column-width($number-of-columns) {
+    width: $number-of-columns / 12 * 100%;
+}
+
+@mixin fractional-column-width($numerator, $denominator){
+    width: $numerator / $denominator * 100%;
+}
+
+@mixin offset-margin($number-of-columns) {
+    margin-left: $number-of-columns / 12 * 100%;
+}

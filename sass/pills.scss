@@ -1,0 +1,225 @@
+/*
+ * Pills
+ * A simple, responsive, and tiny CSS row for humans who don't like memorising all those cryptic codes like col-*-6 or something.
+ * https://github.com/rohitkrai03/pills
+ * Copyright 2015, Rohit Rai
+ */
+
+@import "mixins";
+@import "reset";
+
+$max-width: 1024px;
+
+// the maximum width of the container in pixels
+$min-width: 768px;
+
+// the minimum width of the container in pixels, before it switches to a mobile friendly display
+$padding-width: 10px;
+
+// the padding that will be applied to both sides of a column in pixels
+
+.row {
+    display: block;
+    overflow: hidden;
+    max-width: $max-width;
+    min-width: $min-width;
+    margin: 0 auto;
+
+    &:after {
+        display: table;
+        clear: both;
+    }
+
+    .row {
+        max-width: 100%;
+        min-width: 100%;
+    }
+    
+    /* This makes padding or first and last column double than normal*/
+    .column, .columns {
+        &:first-of-type{
+            padding-left:  2*$padding-width 
+        }
+        &:last-of-type{
+            padding-right: 2*$padding-width
+        }
+    }
+}
+
+.column, .columns {
+    float: left;
+    padding-left: $padding-width;
+    padding-right: $padding-width;
+    
+    /* This is to make padding or nested rows or columns as zero */
+    & .column, & .columns {
+        &:first-of-type {
+            padding-left: 0;
+        }
+
+        &:last-of-type {
+            padding-right: 0;
+        }
+    }
+
+    & .row{
+        &:first-of-type > .column, &:first-of-type > .columns {
+            padding-top: 0;
+        }
+        &:last-of-type > .column, &:last-of-type > .columns {
+            padding-bottom: 0;
+        }
+    }
+
+    /* To let people remove any padding */
+    &.no-padding {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    
+
+    /* For people who understand columns in a human way better */
+    &.one {
+        @include column-width(1);
+    }
+
+    &.two {
+        @include column-width(2);
+    }
+
+    &.three {
+        @include column-width(3);
+    }
+
+    &.four {
+        @include column-width(4);
+    }
+
+    &.five {
+        @include column-width(5);
+    }
+
+    &.six {
+        @include column-width(6);
+    }
+
+    &.seven {
+        @include column-width(7);
+    }
+
+    &.eight {
+        @include column-width(8);
+    }
+
+    &.nine {
+        @include column-width(9);
+    }
+
+    &.ten {
+        @include column-width(10);
+    }
+
+    &.eleven {
+        @include column-width(11);
+    }
+
+    &.twelve {
+        @include column-width(12);
+    }
+
+
+}
+
+.offset {
+    &.by-one {
+        @include offset-margin(1);
+    }
+
+    &.by-two {
+        @include offset-margin(2);
+    }
+
+    &.by-three {
+        @include offset-margin(3);
+    }
+
+    &.by-four {
+        @include offset-margin(4);
+    }
+
+    &.by-five {
+        @include offset-margin(5);
+    }
+
+    &.by-six {
+        @include offset-margin(6);
+    }
+
+    &.by-seven {
+        @include offset-margin(7);
+    }
+
+    &.by-eight {
+        @include offset-margin(8);
+    }
+
+    &.by-nine {
+        @include offset-margin(9);
+    }
+
+    &.by-ten {
+        @include offset-margin(10);
+    }
+
+    &.by-eleven {
+        @include offset-margin(11);
+    }
+}
+
+@media handheld, only screen and (max-width: 767px) {
+    .row {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .offset {
+        &.by-one,
+        &.by-two,
+        &.by-three,
+        &.by-four,
+        &.by-five,
+        &.by-six,
+        &.by-seven,
+        &.by-eight,
+        &.by-nine,
+        &.by-ten,
+        &.by-eleven {
+            margin-left: 0;
+        }
+    }
+
+    .column, .columns {
+        &.one,
+        &.two,
+        &.three,
+        &.four,
+        &.five,
+        &.six,
+        &.seven,
+        &.eight,
+        &.nine,
+        &.ten,
+        &.eleven,
+        &.twelve {
+            width: auto;
+            float: none;
+            padding-left: $padding-width;
+            padding-right: $padding-width;
+        }
+
+        .column, .columns {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}

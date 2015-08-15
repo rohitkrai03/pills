@@ -1,18 +1,118 @@
 /*
  * Pills
- * A simple, responsive, and tiny CSS grid for humans who don't like memorising all those cryptic codes like col-*-6 or something.
+ * A simple, responsive, and tiny CSS row for humans who don't like memorising all those cryptic codes like col-*-6 or something.
  * https://github.com/rohitkrai03/pills
  * Copyright 2015, Rohit Rai
  */
+/* Basic reset to start with */
+html, body {
+  margin: 0;
+  padding: 0; }
 
-/* Reset some basic things to start with */
-html,body {
-  margin:  0;
-  padding: 0;
-}
-
-*,*:after,*:before {
+*, *:after, *:before {
   -webkit-box-sizing: border-box;
-  -moz-box-sizing:    border-box;
-  box-sizing:         border-box;
-}
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.row {
+  display: block;
+  overflow: hidden;
+  max-width: 1024px;
+  min-width: 768px;
+  margin: 0 auto;
+  /* This makes padding or first and last column double than normal*/ }
+  .row:after {
+    display: table;
+    clear: both; }
+  .row .row {
+    max-width: 100%;
+    min-width: 100%; }
+  .row .column:first-of-type, .row .columns:first-of-type {
+    padding-left: 20px; }
+  .row .column:last-of-type, .row .columns:last-of-type {
+    padding-right: 20px; }
+
+.column, .columns {
+  float: left;
+  padding-left: 10px;
+  padding-right: 10px;
+  /* This is to make padding or nested rows or columns as zero */
+  /* To let people remove any padding */
+  /* For people who understand columns in a human way better */ }
+  .column .column:first-of-type, .column .columns:first-of-type, .columns .column:first-of-type, .columns .columns:first-of-type {
+    padding-left: 0; }
+  .column .column:last-of-type, .column .columns:last-of-type, .columns .column:last-of-type, .columns .columns:last-of-type {
+    padding-right: 0; }
+  .column .row:first-of-type > .column, .column .row:first-of-type > .columns, .columns .row:first-of-type > .column, .columns .row:first-of-type > .columns {
+    padding-top: 0; }
+  .column .row:last-of-type > .column, .column .row:last-of-type > .columns, .columns .row:last-of-type > .column, .columns .row:last-of-type > .columns {
+    padding-bottom: 0; }
+  .column.no-padding, .columns.no-padding {
+    padding-left: 0 !important;
+    padding-right: 0 !important; }
+  .column.one, .columns.one {
+    width: 8.33333%; }
+  .column.two, .columns.two {
+    width: 16.66667%; }
+  .column.three, .columns.three {
+    width: 25%; }
+  .column.four, .columns.four {
+    width: 33.33333%; }
+  .column.five, .columns.five {
+    width: 41.66667%; }
+  .column.six, .columns.six {
+    width: 50%; }
+  .column.seven, .columns.seven {
+    width: 58.33333%; }
+  .column.eight, .columns.eight {
+    width: 66.66667%; }
+  .column.nine, .columns.nine {
+    width: 75%; }
+  .column.ten, .columns.ten {
+    width: 83.33333%; }
+  .column.eleven, .columns.eleven {
+    width: 91.66667%; }
+  .column.twelve, .columns.twelve {
+    width: 100%; }
+
+.offset.by-one {
+  margin-left: 8.33333%; }
+.offset.by-two {
+  margin-left: 16.66667%; }
+.offset.by-three {
+  margin-left: 25%; }
+.offset.by-four {
+  margin-left: 33.33333%; }
+.offset.by-five {
+  margin-left: 41.66667%; }
+.offset.by-six {
+  margin-left: 50%; }
+.offset.by-seven {
+  margin-left: 58.33333%; }
+.offset.by-eight {
+  margin-left: 66.66667%; }
+.offset.by-nine {
+  margin-left: 75%; }
+.offset.by-ten {
+  margin-left: 83.33333%; }
+.offset.by-eleven {
+  margin-left: 91.66667%; }
+
+@media handheld, only screen and (max-width: 767px) {
+  .row {
+    width: 100%;
+    min-width: 0; }
+
+  .offset.by-one, .offset.by-two, .offset.by-three, .offset.by-four, .offset.by-five, .offset.by-six, .offset.by-seven, .offset.by-eight, .offset.by-nine, .offset.by-ten, .offset.by-eleven {
+    margin-left: 0; }
+
+  .column.one, .column.two, .column.three, .column.four, .column.five, .column.six, .column.seven, .column.eight, .column.nine, .column.ten, .column.eleven, .column.twelve, .columns.one, .columns.two, .columns.three, .columns.four, .columns.five, .columns.six, .columns.seven, .columns.eight, .columns.nine, .columns.ten, .columns.eleven, .columns.twelve {
+    width: auto;
+    float: none;
+    padding-left: 10px;
+    padding-right: 10px; }
+  .column .column, .column .columns, .columns .column, .columns .columns {
+    padding-left: 0;
+    padding-right: 0; } }
+
+/*# sourceMappingURL=pills.css.map */
