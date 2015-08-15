@@ -1,0 +1,18 @@
+/*
+ * Pills
+ * A simple, responsive, and tiny CSS grid for humans who don't like memorising all those cryptic codes like col-*-6 or something.
+ * https://github.com/rohitkrai03/pills
+ * Copyright 2015, Rohit Rai
+ */
+
+/* Reset some basic things to start with */
+html,body {
+  margin:  0;
+  padding: 0;
+}
+
+*,*:after,*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing:    border-box;
+  box-sizing:         border-box;
+}
