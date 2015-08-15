@@ -34,14 +34,15 @@ $padding-width: 10px;
         max-width: 100%;
         min-width: 100%;
     }
-    
+
     /* This makes padding or first and last column double than normal*/
     .column, .columns {
-        &:first-of-type{
-            padding-left:  2*$padding-width 
+        &:first-of-type {
+            padding-left: 2 * $padding-width;
         }
-        &:last-of-type{
-            padding-right: 2*$padding-width
+
+        &:last-of-type {
+            padding-right: 2 * $padding-width;
         }
     }
 }
@@ -50,7 +51,7 @@ $padding-width: 10px;
     float: left;
     padding-left: $padding-width;
     padding-right: $padding-width;
-    
+
     /* This is to make padding or nested rows or columns as zero */
     & .column, & .columns {
         &:first-of-type {
@@ -62,10 +63,11 @@ $padding-width: 10px;
         }
     }
 
-    & .row{
+    & .row {
         &:first-of-type > .column, &:first-of-type > .columns {
             padding-top: 0;
         }
+
         &:last-of-type > .column, &:last-of-type > .columns {
             padding-bottom: 0;
         }
@@ -76,7 +78,6 @@ $padding-width: 10px;
         padding-left: 0 !important;
         padding-right: 0 !important;
     }
-    
 
     /* For people who understand columns in a human way better */
     &.one {
@@ -127,7 +128,47 @@ $padding-width: 10px;
         @include column-width(12);
     }
 
+    /* For people who don't like thinking of grids in columns, rather they like to think in portions of page. Like half or one third of page */
 
+    & .whole, & .w-1-1 {
+        @include fractional-column-width(1,1);
+    }
+
+    & .half, & .w-1-2 {
+        @include fractional-column-width(1,2);
+    }
+
+    & .one-third, & .w-1-3 {
+        @include fractional-column-width(1,3);
+    }
+
+    & .two-thirds, & .w-2-3 {
+        @include fractional-column-width(2,3);
+    }
+
+    & .one-quarter, & .one-fourth, & .w-1-4 {
+        @include fractional-column-width(1,4);
+    }
+
+    & .three-quarters, & .three-fourths, & .w-3-4 {
+        @include fractional-column-width(3,4);
+    }
+
+    & .one-fifth, & .w-1-5 {
+        @include fractional-column-width(1,5);
+    }
+
+    & .two-fifths, & .w-2-5 {
+        @include fractional-column-width(1,1);
+    }
+
+    & .three-fifths, & .w-3-5 {
+        @include fractional-column-width(1,1);
+    }
+
+    & .four-fifths, & .w-4-5 {
+        @include fractional-column-width(1,1);
+    }
 }
 
 .offset {
