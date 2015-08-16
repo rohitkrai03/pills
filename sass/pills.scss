@@ -46,6 +46,9 @@ $padding-width: 10px;
 
     //This makes padding of first and last column double than normal
     .column, .columns {
+        float: left;
+        width: 100%;
+        padding: $padding-width;
         &:first-of-type {
             padding-left: 2 * $padding-width;
         }
@@ -57,10 +60,6 @@ $padding-width: 10px;
 }
 
 .column, .columns {
-    float: left;
-    padding-left: $padding-width;
-    padding-right: $padding-width;
-
     // This causes the img to be resized if img is bigger than the column
     img {
         max-width: 100%;
