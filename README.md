@@ -63,7 +63,7 @@ Without this meta tag, mobiles and tablets might load your page as a scaled-down
 
 ## Usage
 
-A part of Pills is build using `columns` classes which are inside of a `row` class.
+* A part of Pills is build using `columns` classes which are inside of a `row` class.
 
 The `row` class encapsulates the `columns`. As Pills uses a twelve column grid, the `twelve columns` class will take up the whole of the row.
 ```html
@@ -72,6 +72,7 @@ The `row` class encapsulates the `columns`. As Pills uses a twelve column grid, 
       </div>
     </div>
 ```
+
 
 You can mix it up however you like though.
 ```html
@@ -82,6 +83,7 @@ You can mix it up however you like though.
       </div>
     </div>
 ```
+
 
 You can put a `row` class inside of a `column` class in order to nest `columns`.
 ```html
@@ -99,6 +101,7 @@ You can put a `row` class inside of a `column` class in order to nest `columns`.
     </div>
 ```
 
+
 You can also offset a column as per your wish.
 ```html
     <div class='row'>
@@ -107,13 +110,16 @@ You can also offset a column as per your wish.
 ```
 
 
-The second part of Pills consist of five column layout with division of page in mind. If you want to strech the column to whole page, just use `whole` along with `column`
+
+
+* The second part of Pills consist of five column layout with division of page in mind. If you want to strech the column to whole page, just use `whole` along with `column`
 ```html
     <div class='row'>
       <div class='column whole'>
       </div>
     </div>
 ```
+
 
 Using two halves or the page
 ```html
@@ -124,6 +130,7 @@ Using two halves or the page
       </div>
     </div>
 ```
+
 
 This can also be nested like above.
 ```html
@@ -141,6 +148,7 @@ This can also be nested like above.
     </div>
 ```
 
+
 You can also offset a column as per your wish.
 ```html
     <div class='row'>
@@ -155,5 +163,5 @@ I'd love to get contributions for this project. This is just my amateur attempt 
 
 ## License
 
-MIT [LICENSE](https://github.com/rohitkrai03/pills/blob/master/LICENSE) (MIT).
+[LICENSE](https://github.com/rohitkrai03/pills/blob/master/LICENSE) (MIT).
  
