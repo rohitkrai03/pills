@@ -9,7 +9,7 @@ Well, there are three types of people who use css grids in there own way -
 
 * First - The ones who just memorize the cryptic codes like col-md-6 or whatever from their favourite CSS Framework like Bootstrap or Foundation. And not long before, i too was in this category using Bootstrap's grid all the time.
 
-* Second - The ones who simplify the grids into simple partitions of the page. Like half of the page or one-third or something like that and process ahead with that. One of the best grid frameworks that is present for this category is [Gridism →](http://cobyism.com/gridism/) which  actually inspired me to create Pills in the first place.
+* Second - The ones who simplify the grids into simple partitions of the page. Like half of the page or one-third or something like that and process ahead with that. One of the best grid frameworks that is present for this category is [Gridism](http://cobyism.com/gridism/) which  actually inspired me to create Pills in the first place.
 
 * Third -  The ones who like to count number of rows and columns but in a simple human like language.
 
@@ -20,13 +20,13 @@ Trust me, Gridism is awesome and it simplifies stuff like anything. But still so
 > What if i wanted a simple 12-column layout and i could say that i want this div to be of size of **four columns**  and another div in the same row with size of **eight columns**?? 
 > What if i wanted to use offsets??
 
-This made me think about a grid which will focus on both the Second and Third category of people. A grid which can be used like traditional row column layout or the more contemporary thinking of diving the page like half or one-third or something.
+This made me think about a grid which will focus on both the Second and Third category of people. A grid which can be used like traditional row column layout or the more contemporary thinking of dividing the page like half or one-third or something.
 
-So, Pills has two parts - 
+So, Pills has two parts (Not literally, i mean there is just one file that is pills.css) - 
 
 * First - This will have a 12 columns for that granular control but still would be simple enough like english language.
 
-* Second - Inspired by Gridism thinking and catering to people who think fractional division on page is simpler.
+* Second - Inspired by Gridism thinking and catering to people who think fractional division of page is simpler.
 
 
 ## Installation
@@ -39,7 +39,7 @@ The easiest way to use Pills in your project is via the [Bower](http://twitter.g
 bower install pills
 ```
 
-Elsewise, [download the zip folder](https://github.com/rohitkrai03/pills), extract it, and copy `css/pills.min.css` into your project’s folder. Boom. Done.
+Elsewise, [download the zip folder from](https://github.com/rohitkrai03/pills), extract it, and copy `css/pills.min.css` into your project’s folder. Boom. Done.
 
 ### 2. Link the stylesheet
 
