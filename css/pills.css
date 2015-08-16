@@ -17,7 +17,6 @@ html, body {
   display: block;
   overflow: hidden;
   max-width: 1024px;
-  min-width: 599px;
   margin: 0 auto;
   *zoom: 1; }
   .row:before, .row:after {

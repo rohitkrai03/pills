@@ -25,7 +25,6 @@ $padding-width: 10px;
     display: block;
     overflow: hidden;
     max-width: $max-width;
-    min-width: $min-width;
     margin: 0 auto;
     *zoom: 1;
 
@@ -332,7 +331,7 @@ $padding-width: 10px;
 @media screen and (min-width: 1180px) {
     .wide .row, 
     .row .wide {
-        max-width: 1180px;
+        max-width: $wide-max-width;
         margin: 0 auto;
     }
 }
@@ -341,7 +340,7 @@ $padding-width: 10px;
 @media screen and (min-width: 1366px) {
     .wider .row, 
     .row .wider {
-        max-width: 1366px;
+        max-width: $wider-max-width;
         margin: 0 auto;
     }
 }
