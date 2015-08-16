@@ -2,8 +2,6 @@
 
 > A simple, responsive, and tiny CSS grid for humans who don't like memorising all those cryptic codes like col-*-6 or something.
 
-[View the demo →](http://cobyism.com/gridism/)
-
 ## Why?
 You must be thinking there are like a thousand grid frameworks. So why another one?? What's so special about this one??
 
