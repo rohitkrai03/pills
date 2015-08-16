@@ -63,7 +63,7 @@ Without this meta tag, mobiles and tablets might load your page as a scaled-down
 
 ## Usage
 
-* A part of Pills is build using `columns` classes which are inside of a `row` class.
+#### 1. A part of Pills is build using `columns` classes which are inside of a `row` class.
 
 The `row` class encapsulates the `columns`. As Pills uses a twelve column grid, the `twelve columns` class will take up the whole of the row.
 ```html
@@ -112,7 +112,8 @@ You can also offset a column as per your wish.
 
 
 
-* The second part of Pills consist of five column layout with division of page in mind. If you want to strech the column to whole page, just use `whole` along with `column`
+#### 2. The second part of Pills consist of five column layout with division of page in mind. If you want to strech the column to whole page, just use `whole` along with `column`
+
 ```html
     <div class='row'>
       <div class='column whole'>
