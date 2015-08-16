@@ -147,44 +147,44 @@ $padding-width: 10px;
     // * For example: for a grid unit 1/3 (one third) of the parent width,
     // * simply apply class="w-1-3" to the element. 
     
-    & .whole, & .w-1-1 {
+    &.whole, &.w-1-1 {
         @include fractional-column-width(1, 1);
     }
 
-    & .half, & .w-1-2 {
+    &.half, &.w-1-2 {
         @include fractional-column-width(1, 2);
     }
 
-    & .one-third, & .w-1-3 {
+    &.one-third, &.w-1-3 {
         @include fractional-column-width(1, 3);
     }
 
-    & .two-thirds, & .w-2-3 {
+    &.two-thirds, &.w-2-3 {
         @include fractional-column-width(2, 3);
     }
 
-    & .one-quarter, & .one-fourth, & .w-1-4 {
+    &.one-quarter, &.one-fourth, &.w-1-4 {
         @include fractional-column-width(1, 4);
     }
 
-    & .three-quarters, & .three-fourths, & .w-3-4 {
+    &.three-quarters, &.three-fourths, &.w-3-4 {
         @include fractional-column-width(3, 4);
     }
 
-    & .one-fifth, & .w-1-5 {
+    &.one-fifth, &.w-1-5 {
         @include fractional-column-width(1, 5);
     }
 
-    & .two-fifths, & .w-2-5 {
-        @include fractional-column-width(1, 1);
+    &.two-fifths, &.w-2-5 {
+        @include fractional-column-width(2, 5);
     }
 
-    & .three-fifths, & .w-3-5 {
-        @include fractional-column-width(1, 1);
+    &.three-fifths, &.w-3-5 {
+        @include fractional-column-width(3, 5);
     }
 
-    & .four-fifths, & .w-4-5 {
-        @include fractional-column-width(1, 1);
+    &.four-fifths, &.w-4-5 {
+        @include fractional-column-width(4, 5);
     }
 }
 
