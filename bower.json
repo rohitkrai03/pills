@@ -1,0 +1,17 @@
+{
+  "name": "pills",
+  "version": "0.1",
+  "author": "Rohit Rai",
+  "homepage": "",
+  "main": ["css/pills.css", "css/pills.min.css"],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rohitkrai03/pills.git"
+  },
+  "ignore": [
+      "shapeshifter/",
+      "**/*.yml",
+      "**/*.html"
+    ],
+  "license": "MIT"
+}
