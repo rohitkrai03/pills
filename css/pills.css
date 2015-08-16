@@ -1,10 +1,9 @@
 /*
  * Pills
- * A simple, responsive, and tiny CSS row for humans who don't like memorising all those cryptic codes like col-*-6 or something.
+ * A simple, responsive, and tiny CSS grid for humans who don't like memorising all those cryptic codes like col-*-6 or something.
  * https://github.com/rohitkrai03/pills
  * Copyright 2015, Rohit Rai
  */
-/* Basic reset to start with */
 html, body {
   margin: 0;
   padding: 0; }
@@ -18,11 +17,14 @@ html, body {
   display: block;
   overflow: hidden;
   max-width: 1024px;
-  min-width: 768px;
+  min-width: 599px;
   margin: 0 auto;
-  /* This makes padding or first and last column double than normal*/ }
-  .row:after {
+  *zoom: 1; }
+  .row:before, .row:after {
+    content: "";
     display: table;
+    line-height: 0; }
+  .row:after {
     clear: both; }
   .row .row {
     max-width: 100%;
@@ -35,11 +37,9 @@ html, body {
 .column, .columns {
   float: left;
   padding-left: 10px;
-  padding-right: 10px;
-  /* This is to make padding or nested rows or columns as zero */
-  /* To let people remove any padding */
-  /* For people who understand columns in a human way better */
-  /* For people who don't like thinking of grids in columns, rather they like to think in portions of page. Like half or one third of page */ }
+  padding-right: 10px; }
+  .column img, .columns img {
+    max-width: 100%; }
   .column .column:first-of-type, .column .columns:first-of-type, .columns .column:first-of-type, .columns .columns:first-of-type {
     padding-left: 0; }
   .column .column:last-of-type, .column .columns:last-of-type, .columns .column:last-of-type, .columns .columns:last-of-type {
@@ -96,64 +96,89 @@ html, body {
   .column .four-fifths, .column .w-4-5, .columns .four-fifths, .columns .w-4-5 {
     width: 100%; }
 
-.offset {
-  /* fractional offset*/ }
-  .offset.by-one {
-    margin-left: 8.33333%; }
-  .offset.by-two {
-    margin-left: 16.66667%; }
-  .offset.by-three {
-    margin-left: 25%; }
-  .offset.by-four {
-    margin-left: 33.33333%; }
-  .offset.by-five {
-    margin-left: 41.66667%; }
-  .offset.by-six {
-    margin-left: 50%; }
-  .offset.by-seven {
-    margin-left: 58.33333%; }
-  .offset.by-eight {
-    margin-left: 66.66667%; }
-  .offset.by-nine {
-    margin-left: 75%; }
-  .offset.by-ten {
-    margin-left: 83.33333%; }
-  .offset.by-eleven {
-    margin-left: 91.66667%; }
-  .offset.by-half {
-    margin-left: 50%; }
-  .offset.by-one-third {
-    margin-left: 33.33333%; }
-  .offset.by-two-thirds {
-    margin-left: 66.66667%; }
-  .offset.by-one-quarter, .offset.by-one-fourth {
-    margin-left: 25%; }
-  .offset.by-three-quarters, .offset.by-three-fourths {
-    margin-left: 75%; }
-  .offset.by-one-fifth {
-    margin-left: 20%; }
-  .offset.by-two-fifths {
-    margin-left: 40%; }
-  .offset.by-three-fifths {
-    margin-left: 60%; }
-  .offset.by-four-fifths {
-    margin-left: 80%; }
+.offset.by-one {
+  margin-left: 8.33333%; }
+.offset.by-two {
+  margin-left: 16.66667%; }
+.offset.by-three {
+  margin-left: 25%; }
+.offset.by-four {
+  margin-left: 33.33333%; }
+.offset.by-five {
+  margin-left: 41.66667%; }
+.offset.by-six {
+  margin-left: 50%; }
+.offset.by-seven {
+  margin-left: 58.33333%; }
+.offset.by-eight {
+  margin-left: 66.66667%; }
+.offset.by-nine {
+  margin-left: 75%; }
+.offset.by-ten {
+  margin-left: 83.33333%; }
+.offset.by-eleven {
+  margin-left: 91.66667%; }
+.offset.by-half {
+  margin-left: 50%; }
+.offset.by-one-third {
+  margin-left: 33.33333%; }
+.offset.by-two-thirds {
+  margin-left: 66.66667%; }
+.offset.by-one-quarter, .offset.by-one-fourth {
+  margin-left: 25%; }
+.offset.by-three-quarters, .offset.by-three-fourths {
+  margin-left: 75%; }
+.offset.by-one-fifth {
+  margin-left: 20%; }
+.offset.by-two-fifths {
+  margin-left: 40%; }
+.offset.by-three-fifths {
+  margin-left: 60%; }
+.offset.by-four-fifths {
+  margin-left: 80%; }
 
-@media handheld, only screen and (max-width: 767px) {
-  .row {
-    width: 100%;
-    min-width: 0; }
+.align-center {
+  text-align: center; }
 
-  .offset.by-one, .offset.by-two, .offset.by-three, .offset.by-four, .offset.by-five, .offset.by-six, .offset.by-seven, .offset.by-eight, .offset.by-nine, .offset.by-ten, .offset.by-eleven {
-    margin-left: 0; }
+.align-left {
+  text-align: left; }
 
-  .column.one, .column.two, .column.three, .column.four, .column.five, .column.six, .column.seven, .column.eight, .column.nine, .column.ten, .column.eleven, .column.twelve, .columns.one, .columns.two, .columns.three, .columns.four, .columns.five, .columns.six, .columns.seven, .columns.eight, .columns.nine, .columns.ten, .columns.eleven, .columns.twelve {
-    width: auto;
-    float: none;
-    padding-left: 10px;
-    padding-right: 10px; }
-  .column .column, .column .columns, .columns .column, .columns .columns {
-    padding-left: 0;
-    padding-right: 0; } }
+.align-right {
+  text-align: right; }
+
+.pull-left {
+  float: left; }
+
+.only-on-mobiles {
+  display: none !important; }
+
+@media screen and (max-width: 599px) {
+  .row:not(.no-stacking-on-mobiles) > .column, .row:not(.no-stacking-on-mobiles) > .columns {
+    width: 100% !important;
+    padding-left: 20px;
+    padding-right: 20px; }
+
+  .column .row .column, .column .row .columns, .columns .row .column, .columns .row .columns {
+    padding-left: 0px;
+    padding-right: 0px; }
+
+  .center-on-mobiles {
+    text-align: center !important; }
+
+  .hide-on-mobiles {
+    display: none !important; }
+
+  .only-on-mobiles {
+    display: block !important; } }
+@media screen and (min-width: 1180px) {
+  .wide .row,
+  .row .wide {
+    max-width: 1180px;
+    margin: 0 auto; } }
+@media screen and (min-width: 1366px) {
+  .wider .row,
+  .row .wider {
+    max-width: 1366px;
+    margin: 0 auto; } }
 
 /*# sourceMappingURL=pills.css.map */

@@ -3,5 +3,5 @@
 "mappings": "",
 "sources": ["../sass/_reset.scss","../sass/pills.scss","../sass/_mixins.scss"],
 "names": [],
-"file": "pills.css"
+"file": "pills.min.css"
 }

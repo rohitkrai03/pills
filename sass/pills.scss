@@ -1,6 +1,6 @@
 /*
  * Pills
- * A simple, responsive, and tiny CSS row for humans who don't like memorising all those cryptic codes like col-*-6 or something.
+ * A simple, responsive, and tiny CSS grid for humans who don't like memorising all those cryptic codes like col-*-6 or something.
  * https://github.com/rohitkrai03/pills
  * Copyright 2015, Rohit Rai
  */
@@ -11,12 +11,15 @@
 // the maximum width of the container in pixels
 $max-width: 1024px;
 
+$wide-max-width: 1180px;
+
+$wider-max-width: 1366px;
+
 // the minimum width of the container in pixels, before it switches to a mobile friendly display
-$min-width: 768px;
+$min-width: 599px;
 
-// the padding that will be applied to both sides of a column in pixels
+// the padding that will be applied to both sides of a column in pixels, also known as gutter
 $padding-width: 10px;
-
 
 .row {
     display: block;
@@ -24,9 +27,15 @@ $padding-width: 10px;
     max-width: $max-width;
     min-width: $min-width;
     margin: 0 auto;
+    *zoom: 1;
+
+    &:before, &:after {
+        content: "";
+        display: table;
+        line-height: 0;
+    }
 
     &:after {
-        display: table;
         clear: both;
     }
 
@@ -35,7 +44,7 @@ $padding-width: 10px;
         min-width: 100%;
     }
 
-    /* This makes padding or first and last column double than normal*/
+    //This makes padding of first and last column double than normal
     .column, .columns {
         &:first-of-type {
             padding-left: 2 * $padding-width;
@@ -52,7 +61,12 @@ $padding-width: 10px;
     padding-left: $padding-width;
     padding-right: $padding-width;
 
-    /* This is to make padding or nested rows or columns as zero */
+    // This causes the img to be resized if img is bigger than the column
+    img {
+        max-width: 100%;
+    }
+
+    // This is to make padding of nested rows or columns as zero
     & .column, & .columns {
         &:first-of-type {
             padding-left: 0;
@@ -73,13 +87,13 @@ $padding-width: 10px;
         }
     }
 
-    /* To let people remove any padding */
+    // To let people remove any padding
     &.no-padding {
         padding-left: 0 !important;
         padding-right: 0 !important;
     }
 
-    /* For people who understand columns in a human way better */
+    // For people who understand columns in a human way better
     &.one {
         @include column-width(1);
     }
@@ -128,46 +142,49 @@ $padding-width: 10px;
         @include column-width(12);
     }
 
-    /* For people who don't like thinking of grids in columns, rather they like to think in portions of page. Like half or one third of page */
-
+    // * For people who don't like thinking of grids in columns, rather they like to think in portions of page. Like half or one third of page.
+    // * Width classes also have shorthand versions numbered as fractions
+    // * For example: for a grid unit 1/3 (one third) of the parent width,
+    // * simply apply class="w-1-3" to the element. 
+    
     & .whole, & .w-1-1 {
-        @include fractional-column-width(1,1);
+        @include fractional-column-width(1, 1);
     }
 
     & .half, & .w-1-2 {
-        @include fractional-column-width(1,2);
+        @include fractional-column-width(1, 2);
     }
 
     & .one-third, & .w-1-3 {
-        @include fractional-column-width(1,3);
+        @include fractional-column-width(1, 3);
     }
 
     & .two-thirds, & .w-2-3 {
-        @include fractional-column-width(2,3);
+        @include fractional-column-width(2, 3);
     }
 
     & .one-quarter, & .one-fourth, & .w-1-4 {
-        @include fractional-column-width(1,4);
+        @include fractional-column-width(1, 4);
     }
 
     & .three-quarters, & .three-fourths, & .w-3-4 {
-        @include fractional-column-width(3,4);
+        @include fractional-column-width(3, 4);
     }
 
     & .one-fifth, & .w-1-5 {
-        @include fractional-column-width(1,5);
+        @include fractional-column-width(1, 5);
     }
 
     & .two-fifths, & .w-2-5 {
-        @include fractional-column-width(1,1);
+        @include fractional-column-width(1, 1);
     }
 
     & .three-fifths, & .w-3-5 {
-        @include fractional-column-width(1,1);
+        @include fractional-column-width(1, 1);
     }
 
     & .four-fifths, & .w-4-5 {
-        @include fractional-column-width(1,1);
+        @include fractional-column-width(1, 1);
     }
 }
 
@@ -215,91 +232,117 @@ $padding-width: 10px;
     &.by-eleven {
         @include offset-margin(11);
     }
-    
 
-    /* fractional offset*/
-    &.by-half{
-        @include fractional-offset-margin(1,2);
+    // fractional offset
+    &.by-half {
+        @include fractional-offset-margin(1, 2);
     }
 
     &.by-one-third {
-        @include fractional-offset-margin(1,3);
+        @include fractional-offset-margin(1, 3);
     }
 
-    &.by-two-thirds{
-        @include fractional-offset-margin(2,3);
+    &.by-two-thirds {
+        @include fractional-offset-margin(2, 3);
     }
 
-    &.by-one-quarter, &.by-one-fourth{
-        @include fractional-offset-margin(1,4);
+    &.by-one-quarter, &.by-one-fourth {
+        @include fractional-offset-margin(1, 4);
     }
 
     &.by-three-quarters, &.by-three-fourths {
-        @include fractional-offset-margin(3,4);
+        @include fractional-offset-margin(3, 4);
     }
 
     &.by-one-fifth {
-        @include fractional-offset-margin(1,5);
+        @include fractional-offset-margin(1, 5);
     }
 
-    &.by-two-fifths{
-        @include fractional-offset-margin(2,5);
+    &.by-two-fifths {
+        @include fractional-offset-margin(2, 5);
     }
 
-    &.by-three-fifths{
-        @include fractional-offset-margin(3,5);
+    &.by-three-fifths {
+        @include fractional-offset-margin(3, 5);
     }
 
-    &.by-four-fifths{
-        @include fractional-offset-margin(4,5);
+    &.by-four-fifths {
+        @include fractional-offset-margin(4, 5);
     }
-
 }
 
-@media handheld, only screen and (max-width: 767px) {
-    .row {
-        width: 100%;
-        min-width: 0;
-    }
+// A few Utilities
+.align-center {
+    text-align: center;
+}
 
-    .offset {
-        &.by-one,
-        &.by-two,
-        &.by-three,
-        &.by-four,
-        &.by-five,
-        &.by-six,
-        &.by-seven,
-        &.by-eight,
-        &.by-nine,
-        &.by-ten,
-        &.by-eleven {
-            margin-left: 0;
+.align-left {
+    text-align: left;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.pull-left {
+    float: left;
+}
+
+// This class can be used to hide stuff on all devices except mobile
+.only-on-mobiles {
+    display: none !important;
+}
+
+
+
+// A few responsive titbits
+@media screen and (max-width: 599px) {
+    // This basically stacks all the columns for mobile devices. Except when you explicitly say .no-stacking-mobiles
+    .row {
+        &:not(.no-stacking-on-mobiles) > .column, &:not(.no-stacking-on-mobiles) > .columns {
+            width: 100% !important;
+            padding-left: 20px;
+            padding-right: 20px;
         }
     }
 
     .column, .columns {
-        &.one,
-        &.two,
-        &.three,
-        &.four,
-        &.five,
-        &.six,
-        &.seven,
-        &.eight,
-        &.nine,
-        &.ten,
-        &.eleven,
-        &.twelve {
-            width: auto;
-            float: none;
-            padding-left: $padding-width;
-            padding-right: $padding-width;
+        & .row {
+            & .column, & .columns {
+                padding-left: 0px;
+                padding-right: 0px;
+            }
         }
+    }
 
-        .column, .columns {
-            padding-left: 0;
-            padding-right: 0;
-        }
+    // Changing a few behaviours on mobile devices if you want.
+    .center-on-mobiles {
+        text-align: center !important;
+    }
+
+    .hide-on-mobiles {
+        display: none !important;
+    }
+
+    .only-on-mobiles {
+        display: block !important;
+    }
+}
+
+// Use .wide class for medium sized devices like laptops
+@media screen and (min-width: 1180px) {
+    .wide .row, 
+    .row .wide {
+        max-width: 1180px;
+        margin: 0 auto;
+    }
+}
+
+// Use .wider class for devices with even bigger resolutions like retina
+@media screen and (min-width: 1366px) {
+    .wider .row, 
+    .row .wider {
+        max-width: 1366px;
+        margin: 0 auto;
     }
 }
