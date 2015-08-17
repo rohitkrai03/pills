@@ -2,7 +2,7 @@
   "name": "pills",
   "version": "0.1",
   "author": "Rohit Rai",
-  "homepage": "http://rohitkrai.gihtub.io/pills",
+  "homepage": "http://arkpod.in/pills",
   "main": ["css/pills.css", "css/pills.min.css"],
   "repository": {
     "type": "git",
