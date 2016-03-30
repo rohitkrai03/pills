@@ -187,3 +187,8 @@ pre
     border-radius: 0 0 5px 5px;
 }
 
+p code{
+    display: inline-block;
+    margin-top: 5px;
+}
+
