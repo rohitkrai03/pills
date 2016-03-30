@@ -291,6 +291,15 @@ $padding-width: 10px;
     display: none !important;
 }
 
+// To hide some blocks on all devices. This block will not be rendered on webpage.
+.hide {
+  display: none !important; }
+
+// To make some blocks invisible on all devices. This block will be rendered with visibility as hidden on webpage.
+.invisible {
+  visibility: hidden; }
+
+
 
 
 // A few responsive titbits
@@ -344,3 +353,4 @@ $padding-width: 10px;
         margin: 0 auto;
     }
 }
+
