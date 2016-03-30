@@ -151,6 +151,12 @@ html, body {
 .only-on-mobiles {
   display: none !important; }
 
+.hide {
+  display: none !important; }
+
+.invisible {
+  visibility: hidden; }
+
 @media screen and (max-width: 599px) {
   .row:not(.no-stacking-on-mobiles) > .column, .row:not(.no-stacking-on-mobiles) > .columns {
     width: 100% !important;
