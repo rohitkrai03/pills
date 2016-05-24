@@ -40,14 +40,19 @@ The easiest way to use Pills in your project is via the [Bower](http://twitter.g
 bower install pills
 ```
 
-Elsewise, [download the zip folder from](https://github.com/rohitkrai03/pills), extract it, and copy `css/pills.min.css` into your project’s folder. Boom. Done.
+Also, you can download it using npm.
+```sh
+npm install pills
+```
+
+Elsewise, [download the zip folder from](https://github.com/rohitkrai03/pills), extract it, and copy `dist/pills.min.css` into your project’s folder. Boom. Done.
 
 ### 2. Link the stylesheet
 
 Add the following stylesheet to your HTML’s `<head>` section:
 
 ```html
-<link rel="stylesheet" href="bower_components/pills/pills.min.css">
+<link rel="stylesheet" href="bower_components/pills/dist/pills.min.css">
 ```
 
 **Note:** If you didn’t install using Bower, you need to adjust the path of CSS file to match your file structure.
@@ -169,5 +174,5 @@ I'd love to get contributions for this project. This is just my amateur attempt 
 
 ## License
 
-[LICENSE](https://github.com/rohitkrai03/pills/blob/master/LICENSE) (MIT).
+[LICENSE](https://github.com/rohitkrai03/pills/blob/gh-pages/LICENSE) (MIT).
  
