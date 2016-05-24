@@ -1,0 +1,17 @@
+{
+  "name": "pills",
+  "version": "0.4.6",
+  "description": "A simple, responsive, and tiny CSS grid for humans.",
+  "main": "dist/pills.min.css",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rohitkrai03/pills.git"
+  },
+  "keywords": ["css", "grid", "responsive", "framework"],
+  "author": "Rohit Rai <rohitkrai03@gmail.com> (http://arkpod.in/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rohitkrai03/pills/issues"
+  },
+  "homepage": "https://github.com/rohitkrai03/pills#readme"
+}
