@@ -6,26 +6,26 @@
 ## Why?
 You must be thinking there are like a thousand grid frameworks. So why another one?? What's so special about this one??
 
-Well, there are three types of people who use css grids in there own way -
+Well, there are three types of people who use css grids in their own way -
 
-* First - The ones who just memorize the cryptic codes like col-md-6 or whatever from their favourite CSS Framework like Bootstrap or Foundation. And not long before, i too was in this category using Bootstrap's grid all the time.
+* First - The ones who just memorize the cryptic codes like col-md-6 or whatever from their favourite CSS Framework like Bootstrap or Foundation. And not long before, I too was in this category using Bootstrap's grid all the time.
 
 * Second - The ones who simplify the grids into simple partitions of the page. Like half of the page or one-third or something like that and process ahead with that. One of the best grid frameworks that is present for this category is [Gridism](http://cobyism.com/gridism/) which  actually inspired me to create Pills in the first place.
 
-* Third -  The ones who like to count number of rows and columns but in a simple human like language.
+* Third -  The ones who like to count number of rows and columns but in a simple, human-like language.
 
 
 ### My thoughts
-Trust me, Gridism is awesome and it simplifies stuff like anything. But still sometimes i felt the one-third, two-fifths, golden-small n all are a bit of confusing (_For me atleast_). And Gridism is just a 5 column grid which can be sometimes a bit limiting compared to 12-column grids. 
+Trust me, Gridism is awesome and it simplifies stuff like anything. But still sometimes I felt the one-third, two-fifths, golden-small n all are a bit of confusing (_For me at least_). And Gridism is just a 5 column grid which can sometimes be a bit limiting compared to 12-column grids. 
 
-> What if i wanted a simple 12-column layout and i could say that i want this div to be of size of **four columns**  and another div in the same row with size of **eight columns**?? 
-> What if i wanted to use offsets??
+> What if I wanted a simple 12-column layout and I could say that I want this div to be of size of **four columns**  and another div in the same row with size of **eight columns**?? 
+> What if I wanted to use offsets??
 
-This made me think about a grid which will focus on both the Second and Third category of people. A grid which can be used like traditional row column layout or the more contemporary thinking of dividing the page like half or one-third or something.
+This made me think about a grid which will focus on both the Second and Third category of people. A grid which can be used like traditional row-column layout or the more contemporary thinking of dividing the page like half or one-third or something.
 
-So, Pills has two parts (Not literally, i mean there is just one file that is pills.css) - 
+So, Pills has two parts (Not literally, I mean there is just one file that is pills.css) - 
 
-* First - This will have a 12 columns for that granular control but still would be simple enough like english language.
+* First - This will have a 12 columns for that granular control but still would be simple enough like English language.
 
 * Second - Inspired by Gridism thinking and catering to people who think fractional division of page is simpler.
 
@@ -45,7 +45,7 @@ Also, you can download it using npm.
 npm install pills
 ```
 
-Elsewise, [download the zip folder from](https://github.com/rohitkrai03/pills), extract it, and copy `dist/pills.min.css` into your project’s folder. Boom. Done.
+Otherwise, [download the zip folder from here](https://github.com/rohitkrai03/pills), extract it, and copy `dist/pills.min.css` into your project’s folder. Boom. Done.
 
 ### 2. Link the stylesheet
 
@@ -55,7 +55,7 @@ Add the following stylesheet to your HTML’s `<head>` section:
 <link rel="stylesheet" href="bower_components/pills/dist/pills.min.css">
 ```
 
-**Note:** If you didn’t install using Bower, you need to adjust the path of CSS file to match your file structure.
+**Note:** If you didn’t install using Bower, you need to adjust the path of the CSS file to match your file structure.
 
 ### 3. Viewport scale
 
@@ -71,7 +71,7 @@ Without this meta tag, mobiles and tablets might load your page as a scaled-down
 
 ### 1. First 
 
-A part of Pills is build using `columns` classes which are inside of a `row` class.
+A part of Pills is to build using `columns` classes which are inside of a `row` class.
 
 The `row` class encapsulates the `columns`. As Pills uses a twelve column grid, the `twelve columns` class will take up the whole of the row.
 ```html
@@ -122,7 +122,7 @@ You can also offset a column as per your wish.
 
 ### 2. Second 
 
-The second part of Pills consist of five column layout with division of page in mind. If you want to strech the column to whole page, just use `whole` along with `column`
+The second part of Pills consists of a five column layout with division of page in mind. If you want to strech the column to the whole page, just use `whole` along with `column`
 
 ```html
     <div class='row'>
@@ -132,7 +132,7 @@ The second part of Pills consist of five column layout with division of page in 
 ```
 
 
-Using two halves or the page
+Using two halves of the page
 ```html
     <div class='row'>
       <div class='column half'>
