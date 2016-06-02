@@ -6,17 +6,17 @@
 ## Why?
 You must be thinking there are like a thousand grid frameworks. So why another one?? What's so special about this one??
 
-Well, there are three types of people who use css grids in their own way -
+Well, there are three types of people who use css grids in there own way -
 
-* First - The ones who just memorize the cryptic codes like col-md-6 or whatever from their favourite CSS Framework like Bootstrap or Foundation. And not long ago, I too was in this category using Bootstrap's grid all the time.
+* First - The ones who just memorize the cryptic codes like col-md-6 or whatever from their favourite CSS Framework like Bootstrap or Foundation. And not long before, i too was in this category using Bootstrap's grid all the time.
 
 * Second - The ones who simplify the grids into simple partitions of the page. Like half of the page or one-third or something like that and process ahead with that. One of the best grid frameworks that is present for this category is [Gridism](http://cobyism.com/gridism/) which  actually inspired me to create Pills in the first place.
 
-* Third -  The ones who like to count number of rows and columns but in a simple human-like language.
+* Third -  The ones who like to count number of rows and columns but in a simple human like language.
 
 
 ### My thoughts
-Trust me, Gridism is awesome and it simplifies stuff like anything. But still sometimes I felt the one-third, two-fifths, golden-small n all are a bit of confusing (_For me at least_). And Gridism is just a 5 column grid which can sometimes be a bit limiting compared to 12-column grids. 
+Trust me, Gridism is awesome and it simplifies stuff like anything. But still sometimes i felt the one-third, two-fifths, golden-small n all are a bit of confusing (_For me atleast_). And Gridism is just a 5 column grid which can be sometimes a bit limiting compared to 12-column grids. 
 
 > What if i wanted a simple 12-column layout and i could say that i want this div to be of size of **four columns**  and another div in the same row with size of **eight columns**?? 
 > What if i wanted to use offsets??
@@ -71,7 +71,7 @@ Without this meta tag, mobiles and tablets might load your page as a scaled-down
 
 ### 1. First 
 
-A part of Pills is built using `columns` classes which are inside of a `row` class.
+A part of Pills is build using `columns` classes which are inside of a `row` class.
 
 The `row` class encapsulates the `columns`. As Pills uses a twelve column grid, the `twelve columns` class will take up the whole of the row.
 ```html
@@ -122,7 +122,7 @@ You can also offset a column as per your wish.
 
 ### 2. Second 
 
-The second part of Pills consist of five column layout with division of page in mind. If you want to stretch the column to the whole page width, just use `whole` along with `column`
+The second part of Pills consist of five column layout with division of page in mind. If you want to strech the column to whole page, just use `whole` along with `column`
 
 ```html
     <div class='row'>
@@ -132,7 +132,7 @@ The second part of Pills consist of five column layout with division of page in 
 ```
 
 
-Using two halves of the page
+Using two halves or the page
 ```html
     <div class='row'>
       <div class='column half'>
@@ -160,7 +160,7 @@ This can also be nested like above.
 ```
 
 
-You can also offset a column as you wish.
+You can also offset a column as per your wish.
 ```html
     <div class='row'>
         <div class="column two-thirds offset by-one-third">
