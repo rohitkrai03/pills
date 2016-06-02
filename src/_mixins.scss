@@ -4,7 +4,7 @@
     width: $number-of-columns / 12 * 100%;
 }
 
-@mixin fractional-column-width($numerator, $denominator){
+@mixin fractional-column-width($numerator, $denominator) {
     width: $numerator / $denominator * 100%;
 }
 
@@ -12,6 +12,6 @@
     margin-left: $number-of-columns / 12 * 100%;
 }
 
-@mixin fractional-offset-margin($numerator, $denominator){
+@mixin fractional-offset-margin($numerator, $denominator) {
     margin-left: $numerator / $denominator * 100%;
 }
