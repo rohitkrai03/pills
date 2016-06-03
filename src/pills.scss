@@ -28,7 +28,8 @@ $padding-width: 10px;
     margin: 0 auto;
     *zoom: 1;
 
-    &:before, &:after {
+    &:before,
+    &:after {
         content: "";
         display: table;
         line-height: 0;
@@ -44,7 +45,8 @@ $padding-width: 10px;
     }
 
     //This makes padding of first and last column double than normal
-    .column, .columns {
+    .column,
+    .columns {
         float: left;
         width: 100%;
         padding: $padding-width;
@@ -58,14 +60,16 @@ $padding-width: 10px;
     }
 }
 
-.column, .columns {
+.column,
+.columns {
     // This causes the img to be resized if img is bigger than the column
     img {
         max-width: 100%;
     }
 
     // This is to make padding of nested rows or columns as zero
-    & .column, & .columns {
+    & .column,
+    & .columns {
         &:first-of-type {
             padding-left: 0;
         }
@@ -76,11 +80,13 @@ $padding-width: 10px;
     }
 
     & .row {
-        &:first-of-type > .column, &:first-of-type > .columns {
+        &:first-of-type > .column,
+        &:first-of-type > .columns {
             padding-top: 0;
         }
 
-        &:last-of-type > .column, &:last-of-type > .columns {
+        &:last-of-type > .column,
+        &:last-of-type > .columns {
             padding-bottom: 0;
         }
     }
@@ -145,43 +151,55 @@ $padding-width: 10px;
     // * For example: for a grid unit 1/3 (one third) of the parent width,
     // * simply apply class="w-1-3" to the element.
 
-    &.whole, &.w-1-1 {
+    &.whole,
+    &.w-1-1 {
         @include fractional-column-width(1, 1);
     }
 
-    &.half, &.w-1-2 {
+    &.half,
+    &.w-1-2 {
         @include fractional-column-width(1, 2);
     }
 
-    &.one-third, &.w-1-3 {
+    &.one-third,
+    &.w-1-3 {
         @include fractional-column-width(1, 3);
     }
 
-    &.two-thirds, &.w-2-3 {
+    &.two-thirds,
+    &.w-2-3 {
         @include fractional-column-width(2, 3);
     }
 
-    &.one-quarter, &.one-fourth, &.w-1-4 {
+    &.one-quarter,
+    &.one-fourth,
+    &.w-1-4 {
         @include fractional-column-width(1, 4);
     }
 
-    &.three-quarters, &.three-fourths, &.w-3-4 {
+    &.three-quarters,
+    &.three-fourths,
+    &.w-3-4 {
         @include fractional-column-width(3, 4);
     }
 
-    &.one-fifth, &.w-1-5 {
+    &.one-fifth,
+    &.w-1-5 {
         @include fractional-column-width(1, 5);
     }
 
-    &.two-fifths, &.w-2-5 {
+    &.two-fifths,
+    &.w-2-5 {
         @include fractional-column-width(2, 5);
     }
 
-    &.three-fifths, &.w-3-5 {
+    &.three-fifths,
+    &.w-3-5 {
         @include fractional-column-width(3, 5);
     }
 
-    &.four-fifths, &.w-4-5 {
+    &.four-fifths,
+    &.w-4-5 {
         @include fractional-column-width(4, 5);
     }
 }
@@ -244,11 +262,13 @@ $padding-width: 10px;
         @include fractional-offset-margin(2, 3);
     }
 
-    &.by-one-quarter, &.by-one-fourth {
+    &.by-one-quarter,
+    &.by-one-fourth {
         @include fractional-offset-margin(1, 4);
     }
 
-    &.by-three-quarters, &.by-three-fourths {
+    &.by-three-quarters,
+    &.by-three-fourths {
         @include fractional-offset-margin(3, 4);
     }
 
@@ -308,16 +328,19 @@ $padding-width: 10px;
 @media screen and (max-width: 599px) {
     // This basically stacks all the columns for mobile devices. Except when you explicitly say .no-stacking-mobiles
     .row {
-        &:not(.no-stacking-on-mobiles) > .column, &:not(.no-stacking-on-mobiles) > .columns {
+        &:not(.no-stacking-on-mobiles) > .column,
+        &:not(.no-stacking-on-mobiles) > .columns {
             width: 100% !important;
             padding-left: 20px;
             padding-right: 20px;
         }
     }
 
-    .column, .columns {
+    .column,
+    .columns {
         & .row {
-            & .column, & .columns {
+            & .column,
+            & .columns {
                 padding-left: 0px;
                 padding-right: 0px;
             }
