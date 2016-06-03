@@ -7,11 +7,21 @@
     "type": "git",
     "url": "git+https://github.com/rohitkrai03/pills.git"
   },
-  "keywords": ["css", "grid", "responsive", "framework"],
+  "keywords": [
+    "css",
+    "grid",
+    "responsive",
+    "framework"
+  ],
   "author": "Rohit Rai <rohitkrai03@gmail.com> (http://arkpod.in/)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/rohitkrai03/pills/issues"
   },
-  "homepage": "https://github.com/rohitkrai03/pills#readme"
+  "homepage": "https://github.com/rohitkrai03/pills#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.1"
+  }
 }
