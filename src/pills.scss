@@ -23,9 +23,9 @@ $padding-width: 10px;
 
 .row {
     display: block;
-    overflow: hidden;
-    max-width: $max-width;
     margin: 0 auto;
+    max-width: $max-width;
+    overflow: hidden;
     *zoom: 1;
 
     &:before,
@@ -48,8 +48,8 @@ $padding-width: 10px;
     .column,
     .columns {
         float: left;
-        width: 100%;
         padding: $padding-width;
+        width: 100%;
 
         &:first-of-type {
             padding-left: 2 * $padding-width;
@@ -341,9 +341,9 @@ $padding-width: 10px;
 
         &:not(.no-stacking-on-mobiles) > .column,
         &:not(.no-stacking-on-mobiles) > .columns {
-            width: 100% !important;
             padding-left: 20px;
             padding-right: 20px;
+            width: 100% !important;
         }
 
     }
@@ -383,8 +383,8 @@ $padding-width: 10px;
 
     .wide .row,
     .row .wide {
-        max-width: $wide-max-width;
         margin: 0 auto;
+        max-width: $wide-max-width;
     }
 
 }
@@ -394,8 +394,8 @@ $padding-width: 10px;
 
     .wider .row,
     .row .wider {
-        max-width: $wider-max-width;
         margin: 0 auto;
+        max-width: $wider-max-width;
     }
 
 }
