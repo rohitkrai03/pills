@@ -28,13 +28,13 @@ $padding-width: 10px;
     margin: 0 auto;
     *zoom: 1;
 
-    &:before, &:after {
+    &::before, &::after {
         content: "";
         display: table;
         line-height: 0;
     }
 
-    &:after {
+    &::after {
         clear: both;
     }
 
