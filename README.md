@@ -75,46 +75,46 @@ A part of Pills is to build using `columns` classes which are inside of a `row` 
 
 The `row` class encapsulates the `columns`. As Pills uses a twelve column grid, the `twelve columns` class will take up the whole of the row.
 ```html
-    <div class='row'>
-      <div class='twelve columns'>
-      </div>
-    </div>
+		<div class="row">
+			<div class="twelve columns">
+			</div>
+		</div>
 ```
 
 
 You can mix it up however you like though.
 ```html
-    <div class='row'>
-      <div class='four columns'>
-      </div>
-      <div class='eight columns'>
-      </div>
-    </div>
+		<div class="row">
+			<div class="four columns">
+			</div>
+			<div class="eight columns">
+			</div>
+		</div>
 ```
 
 
 You can put a `row` class inside of a `column` class in order to nest `columns`.
 ```html
-    <div class='row'>
-      <div class='four columns'>
-      </div>
-      <div class='eight columns'>
-        <div class='row'>
-          <div class='six columns'>
-          </div>
-          <div class='six columns'>
-          </div>
-        </div>
-      </div>
-    </div>
+		<div class="row">
+			<div class="four columns">
+			</div>
+			<div class="eight columns">
+				<div class="row">
+					<div class="six columns">
+					</div>
+					<div class="six columns">
+					</div>
+				</div>
+			</div>
+		</div>
 ```
 
 
 You can also offset a column as per your wish.
 ```html
-    <div class='row'>
-        <div class="eight columns offset by-four">
-    </div>
+		<div class="row">
+				<div class="eight columns offset by-four">
+		</div>
 ```
 
 
@@ -125,46 +125,46 @@ You can also offset a column as per your wish.
 The second part of Pills consists of a five column layout with division of page in mind. If you want to strech the column to the whole page, just use `whole` along with `column`
 
 ```html
-    <div class='row'>
-      <div class='column whole'>
-      </div>
-    </div>
+		<div class="row">
+			<div class="column whole">
+			</div>
+		</div>
 ```
 
 
 Using two halves of the page
 ```html
-    <div class='row'>
-      <div class='column half'>
-      </div>
-      <div class='column half'>
-      </div>
-    </div>
+		<div class="row">
+			<div class="column half">
+			</div>
+			<div class="column half">
+			</div>
+		</div>
 ```
 
 
 This can also be nested like above.
 ```html
-    <div class='row'>
-      <div class='column one-fourth'>
-      </div>
-      <div class='column three-fourths'>
-        <div class='row'>
-          <div class='column two-fifths'>
-          </div>
-          <div class='column three-fifths'>
-          </div>
-        </div>
-      </div>
-    </div>
+		<div class="row">
+			<div class="column one-fourth">
+			</div>
+			<div class="column three-fourths">
+				<div class="row">
+					<div class="column two-fifths">
+					</div>
+					<div class="column three-fifths">
+					</div>
+				</div>
+			</div>
+		</div>
 ```
 
 
 You can also offset a column as per your wish.
 ```html
-    <div class='row'>
-        <div class="column two-thirds offset by-one-third">
-    </div>
+		<div class="row">
+				<div class="column two-thirds offset by-one-third">
+		</div>
 ```
 
 
