@@ -67,6 +67,17 @@ Add the following meta tag to your HTML’s `<head>` section:
 
 Without this meta tag, mobiles and tablets might load your page as a scaled-down version of the desktop size, instead of resizing the content to match the device’s actual viewport width.
 
+## Build
+Install npm dev dependencies.
+```sh
+npm install
+```
+
+For compiling scss files and watching the changes.
+```sh
+gulp
+```
+
 ## Usage
 
 ### 1. First 
