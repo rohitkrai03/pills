@@ -10,7 +10,7 @@
   },
   "ignore": [
       "**/*.yml",
-      "**/*.html",
+      "**/*.html"
     ],
   "license": "MIT"
 }
