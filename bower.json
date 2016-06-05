@@ -1,6 +1,6 @@
 {
   "name": "pills",
-  "version": "v0.1.4",
+  "version": "v0.1.6",
   "author": "Rohit Rai",
   "homepage": "http://arkpod.in/pills",
   "main": ["dist/pills.css", "dist/pills.min.css"],
