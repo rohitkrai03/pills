@@ -1,16 +1,16 @@
 {
   "name": "pills",
-  "version": "0.1",
+  "version": "v0.1.4",
   "author": "Rohit Rai",
   "homepage": "http://arkpod.in/pills",
-  "main": ["css/pills.css", "css/pills.min.css"],
+  "main": ["dist/pills.css", "dist/pills.min.css"],
   "repository": {
     "type": "git",
     "url": "git://github.com/rohitkrai03/pills.git"
   },
   "ignore": [
       "**/*.yml",
-      "**/*.html"
+      "**/*.html",
     ],
   "license": "MIT"
 }
