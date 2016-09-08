@@ -179,6 +179,33 @@ You can also offset a column as per your wish.
 ```
 
 
+### 3. Other useful classes.
+
+####For using different width for the rows.
+
+.wide - 1180px
+```html
+		<div class="row wide">
+			<div class="column whole">
+			</div>
+		</div>
+```
+
+.wider - 1366px
+```html
+		<div class="row wider">
+			<div class="column whole">
+			</div>
+		</div>
+```
+
+No max-width for the rows.
+```html
+		<div class="row free-width">
+			<div class="column whole">
+			</div>
+		</div>
+```
 
 ## Contributing
 I'd love to get contributions for this project. This is just my amateur attempt at doing something which came to my mind. I'm all up for criticism if i've done something wrong, but do help me correct those by contributing to this project. Fork at your will. 

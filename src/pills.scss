@@ -63,6 +63,19 @@ $padding-width: 10px;
 
 }
 
+.wide {
+    max-width: $wide-max-width;
+}
+
+.wider {
+    max-width: $wider-max-width;
+}
+
+.free-width {
+    max-width: none;
+}
+
+
 .column,
 .columns {
     // This causes the img to be resized if img is bigger than the column

@@ -55,6 +55,18 @@ html, body {
   padding-right: 20px;
 }
 
+.wide {
+  max-width: 1180px;
+}
+
+.wider {
+  max-width: 1366px;
+}
+
+.free-width {
+  max-width: none;
+}
+
 .column img,
 .columns img {
   max-width: 100%;
